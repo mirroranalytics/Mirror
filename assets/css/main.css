@@ -533,12 +533,12 @@ a.notify-me {
 }
 
 
-@media (max-width: 768px) {  
-    .logo span img {
-        width: 300px; 
-        height: auto;
-        margin-left: 0; 
-    }
+@media (max-width: 768px) {
+	.logo span img {
+		width: 300px;
+		height: auto;
+		margin-left: -7px;
+	}
 }
 /*-------------------------- Element Head End ----------------------------*/
 

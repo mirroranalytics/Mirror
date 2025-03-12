@@ -535,7 +535,7 @@ a.notify-me {
 
 @media (max-width: 768px) {  
     .logo span img {
-        width: 200px; 
+        width: 300px; 
         height: auto;
         margin-left: 0; 
     }

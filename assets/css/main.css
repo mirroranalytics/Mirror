@@ -13,13 +13,13 @@ body {
 }
 
 p {
-	font-family: 'Rubik-Light', sans-serif;
+	font-family: 'Inter', sans-serif;
 	font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	color: #fff;
-	font-family: 'Rubik-Light', sans-serif;
+	font-family: 'Inter', sans-serif;
 }
 
 hr {
@@ -48,16 +48,16 @@ blockquote {
     letter-spacing: 1px;
 }
 .unordarlist {
-	font-family: 'Roboto', sans-serif;
-    list-style-type: square;
-    font-size: bold;
-    margin-left: -35px;
+	font-family: 'Inter', sans-serif;
+	list-style-type: square;
+	font-size: bold;
+	margin-left: -35px;
 }
 .ordarlist {
-	font-family: 'Roboto', sans-serif;
-    font-size: bold;
-    font-weight: bold;
-    margin-left: -22px;
+	font-family: 'Inter', sans-serif;
+	font-size: bold;
+	font-weight: bold;
+	margin-left: -22px;
 }
 
 .ordarlist li{
@@ -526,8 +526,8 @@ a.notify-me {
 }
 
 .logo span img {
-    width: 640px;
-    height: 60px;
+    width: 800px;
+    height: auto;
     margin-top: 3px;
     margin-left: -10px;
 }
@@ -537,7 +537,8 @@ a.notify-me {
 	.logo span img {
 		width: 300px;
 		height: auto;
-		margin-left: -7px;
+		margin-top: 5px;
+		margin-left: -10px;
 	}
 }
 /*-------------------------- Element Head End ----------------------------*/
@@ -1069,25 +1070,42 @@ a {
 }
 
 .home_text {
-    position: absolute;
-    z-index: 9;
-    height: auto;
-    width: auto;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+	position: absolute;
+	z-index: 9;
+	height: auto;
+	width: auto;
+	bottom: 45%;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
-.home_text p{
-    text-decoration: underline;
-    color: #fff;
-    font-size: 10px;
-    font-weight: inherit;
+	.home_text p {
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+.home_text2 {
+	position: absolute;
+	z-index: 9;
+	height: auto;
+	width: auto;
+	bottom: 45%;
+	left: 50%;
+	transform: translateX(-50%);
 }
+
+	.home_text2 p {
+		color: #1e2026;
+		font-size: 14px;
+		font-weight: bold;
+	}
+
 
 .img-lightbox .col-md-6 {
-    padding-left: 0px;
-    padding-right: 0px;
+	font-family: 'Inter', sans-serif;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
  .p0 {

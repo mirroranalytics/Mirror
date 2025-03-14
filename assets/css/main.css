@@ -2289,7 +2289,7 @@ input, select, textarea {
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;
-		gap: 1em;
+		gap: 2em;
 		align-items: flex-start;
 	}
 
@@ -2309,7 +2309,7 @@ input, select, textarea {
 	}
 
 	#intro .icons-container .icon {
-		height: 1.7em; /* Set a fixed height */
+		height: 1.5em; /* Set a fixed height */
 		width: auto; /* Allow width to adjust proportionally */
 		opacity: 0.6;
 	}
@@ -2401,9 +2401,10 @@ input, select, textarea {
 			transform: translateY(100%);
 		}
 
-	@media screen and (max-width: 736px) {
 
-		#contact .box {
+
+@media screen and (max-width: 736px) {
+	#contact .box {
 			padding: 1.5em 1.5em 2em 1.5em;
 		}
 	}

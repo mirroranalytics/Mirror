@@ -635,11 +635,13 @@ input, select, textarea {
 		margin-bottom: 1em;
 	}
 
+
+
 /* Box */
 
 	.box {
-		background: #ffffff;
-		color: #39454b;
+		background: #151515;
+		color: #e5e6e7;
 		padding: 2em;
 			}
 
@@ -660,7 +662,7 @@ input, select, textarea {
 
 				.box.style2 {
 					padding: 1.5em 1.25em 1.5em 1.25em;
-					background-color: rgba(255, 255, 255, 0.9);
+					background-color: #000000
 				}
 
 		}

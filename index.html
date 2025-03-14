@@ -80,6 +80,8 @@
 					<img src="images/xero.png" alt="xero" class="icon">
 				</a>
 
+
+
 			</div>
 
 			<div class="content">
@@ -88,7 +90,7 @@
 				<header>
 					<h2><img src="images/logo.png"</h2>
 				</header>
-				<p>We help businesses of all sizes unlock the power of data with flexible, scalable solutions that grow with them</p>
+				<p>Helping businesses of all sizes unlock the power of data with flexible, scalable solutions that grow with them</p>
 				<footer>
 					<a href="#one" class="button style2 down">More</a>
 				</footer>
@@ -101,7 +103,7 @@
 				<header>
 					<h21>Future-Proof Your Data</h21>
 				</header>
-				<p>Your business is growing—make sure your data can keep up. We help you lay a strong foundation today, so you don’t face costly overhauls in the future. Whether you need a quick fix, process automation, or a scalable data infrastructure, we tailor solutions to fit your unique challenges. Our goal is to make data work for you, ensuring it supports your business now and evolves seamlessly as you grow.</p>
+				<p>Your business is growing-make sure your data can keep up. We help you lay a strong foundation today, so you don’t face costly overhauls in the future. Whether you need a quick fix, process automation, or a scalable data infrastructure, we tailor solutions to fit your unique challenges. Our goal is to make data work for you, ensuring it supports your business now and evolves seamlessly as you grow.</p>
 			</div>
 			<a href="#two" class="button style2 down anchored">Next</a>
 		</section>
@@ -123,7 +125,7 @@
 				<header>
 					<h21>Efficiency, Automation, and Scalability</h21>
 				</header>
-				<p>Repetitive tasks and inefficient workflows slow businesses down, but automation and optimization can change that. We help you streamline processes, reduce errors, and free up valuable time with solutions designed to match your needs. Whether you're refining existing workflows or preparing for long-term scalability, our adaptable approach ensures that your data infrastructure grows with you—helping you stay ahead, always.</p>
+				<p>Repetitive tasks and inefficient workflows slow businesses down, but automation and optimization can change that. We help you streamline processes, reduce errors, and free up valuable time with solutions designed to match your needs. Whether you're refining existing workflows or preparing for long-term scalability, our adaptable approach ensures that your data infrastructure grows with you-helping you stay ahead, always.</p>
 			</div>
 			<a href="#contact" class="button style2 down anchored">Next</a>
 		</section>
@@ -188,41 +190,38 @@
 
 		</div>
 	</section>-->
+
+
+
+
 		<!-- Contact -->
 		<section id="contact" class="main style3 secondary">
 			<div class="content">
 				<header>
-					<h2>Send us a message!</h2>
-					<p>Let us know what you are looking for and we will get back to you as soon as we can!</p>
+					<h2>How can we help?</h2>
+					<p>Tell us about your data issues and we will get back to you as soon as we can!</p>
 				</header>
 
-				<form id="emailForm" onsubmit="return false;">
-					<input type="text" name="name" placeholder="Your Name" required>
-					<input type="email" name="email" placeholder="Your Email" required>
-					<textarea name="message" placeholder="Your Message" required></textarea>
-					<button type="submit">Send</button>
+				<form action="https://formspree.io/f/xldjdeev" method="post">
+
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required/>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea type="message" id="message" name="message" required> </textarea>
+					</div>
+
+					<input type="submit" value="Submit"/>
+
 				</form>
-
-				<script>
-					document.getElementById("emailForm").addEventListener("submit", function (event) {
-						event.preventDefault();
-
-						var formData = new FormData(this);
-						var object = {};
-						formData.forEach((value, key) => object[key] = value);
-
-                        fetch("https://script.google.com/macros/s/AKfycbx2aiIVHhiNgplC-u7330T4guBzjsDa-QdhOujSFdAEiaxlmUGHVjQtYW0BgZaOGi_J/exec", { 
-							method: "POST",
-							headers: { "Content-Type": "application/json" },
-							body: JSON.stringify(object)
-						})
-							.then(response => response.json())
-							.then(data => alert("Email sent successfully!"))
-							.catch(error => alert("Error sending email!"));
-					});
-				</script>
-
-
 
 				<ul class="actions special">
 

@@ -641,14 +641,15 @@ input, select, textarea {
 		background: #ffffff;
 		color: #39454b;
 		padding: 2em;
-	}
+			}
 
 		.box > :last-child {
 			margin-bottom: 0;
 		}
 
 		.box.style2 {
-			padding: 3.5em 2.5em 3.5em 2.5em;
+			width: 75%; /* Set a width */
+			padding: 1.5em; /* Adjust padding */
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2070,11 +2071,11 @@ input, select, textarea {
 			}
 
 			.main.style3.primary {
-				background: #0F1217;
+				background: #151515;
 			}
 
 			.main.style3.secondary {
-				background: #0F1217;
+				background: #151515;
 			}
 
 		.main.dark {
@@ -2206,8 +2207,8 @@ input, select, textarea {
 		margin: 0;
 		line-height: 1em;
 		padding: 1.5em;
-		background: #39454b;
-		color: rgba(185, 186, 187, 0.5);
+		background: #000000;
+		color: #ffffff;
 		overflow: hidden;
 	}
 
@@ -2281,6 +2282,27 @@ input, select, textarea {
 		background-repeat: repeat, no-repeat;
 	}
 
+	#intro .icons-container {
+		position: absolute;
+		top: 1em;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 1em;
+		align-items: flex-start;
+	}
+
+		#intro .icons-container .icon {
+			height: 1.7em; /* Set a fixed height */
+			width: auto; /* Allow width to adjust proportionally */
+			opacity: 0.6;
+		}
+
+	#intro .content {
+		position: relative;
+	}
+
+
 /* one */
 
 	#one {
@@ -2310,30 +2332,30 @@ input, select, textarea {
 
 /* four */
 
-	#four {
+	/*#four {
 		background:url("../../images/four.jpg");
 		background-size: cover;
 		background-attachment:fixed;
 		background-position: center center;
-	}
+	}*/
 
 /* five */
 
-	#five {
+	/*#five {
 		background: url("../../images/five.jpg");
 		background-size: cover;
 		background-attachment:fixed;
 		background-position:center center;
-	}
+	}*/
 
 /* six */
 
-	#six {
+	/*#six {
 		background:  url("../../images/six.jpg");
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center center;
-	}
+	}*/
 
 
 

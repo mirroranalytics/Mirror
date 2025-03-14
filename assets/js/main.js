@@ -76,6 +76,8 @@
 
 		}
 
+
+
 	// Gallery.
 		$window.on('load', function() {
 
@@ -217,3 +219,5 @@
 			});
 
 })(jQuery);
+
+

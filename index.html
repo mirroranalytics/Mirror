@@ -29,6 +29,14 @@
 			<div class="icons-container">
 
 				<a href="#">
+					<img src="images/dear.png" alt="Dear" class="icon">
+				</a>
+
+				<a href="#">
+					<img src="images/sap.png" alt="SAP" class="icon">
+				</a>
+
+				<a href="#">
 					<img src="images/azure.png" alt="Python" class="icon">
 				</a>
 
@@ -55,6 +63,23 @@
 				<a href="#">
 					<img src="images/fabric.png" alt="Fabric" class="icon">
 				</a>
+
+				<a href="#">
+					<img src="images/dax.png" alt="DAX" class="icon">
+				</a>
+
+				<a href="#">
+					<img src="images/sf.png" alt="SF" class="icon">
+				</a>
+
+				<a href="#">
+					<img src="images/cin7.png" alt="cin7" class="icon">
+				</a>
+
+				<a href="#">
+					<img src="images/xero.png" alt="xero" class="icon">
+				</a>
+
 			</div>
 
 			<div class="content">
@@ -105,37 +130,34 @@
 
 		<!-- Four -->
 		<!--<section id="four" class="main style2 left dark fullscreen">
-			<div class="content box style2">
-				<header>
-					<h21> Big-Tech Expertise, Small-Business Focus</h21>
-				</header>
-				<p>Access the power of enterprise-level analytics without the complexity or high costs. With experience in big tech, we bring cutting-edge data solutions to businesses of all sizes. Whether you’re a startup or an established company, we help you stay ahead of the curve.</p>
-			</div>
-			<a href="#two" class="button style2 down anchored">Next</a>
-		</section>-->
-
+		<div class="content box style2">
+			<header>
+				<h21> Big-Tech Expertise, Small-Business Focus</h21>
+			</header>
+			<p>Access the power of enterprise-level analytics without the complexity or high costs. With experience in big tech, we bring cutting-edge data solutions to businesses of all sizes. Whether you’re a startup or an established company, we help you stay ahead of the curve.</p>
+		</div>
+		<a href="#two" class="button style2 down anchored">Next</a>
+	</section>-->
 		<!-- Five -->
 		<!--<section id="five" class="main style2 right dark fullscreen">
-			<div class="content box style2">
-				<header>
-					<h21>Analytics that Grow with You.</h21>
-				</header>
-				<p>Repetitive tasks and manual processes slow you down—automation speeds you up. We streamline your workflows, eliminate inefficiencies, and reduce errors with automation tailored to your business. From reporting to operations, we help you work smarter, not harder.</p>
-			</div>
-			<a href="#two" class="button style2 down anchored">Next</a>
-		</section>-->
-
+		<div class="content box style2">
+			<header>
+				<h21>Analytics that Grow with You.</h21>
+			</header>
+			<p>Repetitive tasks and manual processes slow you down—automation speeds you up. We streamline your workflows, eliminate inefficiencies, and reduce errors with automation tailored to your business. From reporting to operations, we help you work smarter, not harder.</p>
+		</div>
+		<a href="#two" class="button style2 down anchored">Next</a>
+	</section>-->
 		<!-- Six -->
 		<!--<section id="six" class="main style2 left dark fullscreen">
-			<div class="content box style2">
-				<header>
-					<h21>Solutions That Scale with You</h21>
-				</header>
-				<p>Whether you need a simple data fix or a full-scale transformation, we offer solutions that match your current needs while preparing you for the future. From improving workflows to building robust data systems, we ensure your analytics evolve with your business. No matter where you are in your journey, we help you grow with confidence.</p>
-			</div>
-			<a href="#two" class="button style2 down anchored">Next</a>
-		</section>-->
-
+		<div class="content box style2">
+			<header>
+				<h21>Solutions That Scale with You</h21>
+			</header>
+			<p>Whether you need a simple data fix or a full-scale transformation, we offer solutions that match your current needs while preparing you for the future. From improving workflows to building robust data systems, we ensure your analytics evolve with your business. No matter where you are in your journey, we help you grow with confidence.</p>
+		</div>
+		<a href="#two" class="button style2 down anchored">Next</a>
+	</section>-->
 		<!-- Work -->
 		<!--<section id="work" class="main style3 primary">
 	<div class="content">
@@ -173,38 +195,62 @@
 					<h2>Send us a message!</h2>
 					<p>Let us know what you are looking for and we will get back to you as soon as we can!</p>
 				</header>
-				<div class="box">
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-							<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-							<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-						</div>
-						<ul class="actions special">
-							<li><input type="submit" value="Send Message" /></li>
-						</ul>
+
+				<form id="emailForm" onsubmit="return false;">
+					<input type="text" name="name" placeholder="Your Name" required>
+					<input type="email" name="email" placeholder="Your Email" required>
+					<textarea name="message" placeholder="Your Message" required></textarea>
+					<button type="submit">Send</button>
+				</form>
+
+				<script>
+					document.getElementById("emailForm").addEventListener("submit", function (event) {
+						event.preventDefault();
+
+						var formData = new FormData(this);
+						var object = {};
+						formData.forEach((value, key) => object[key] = value);
+
+                        fetch("https://script.google.com/macros/s/AKfycbx2aiIVHhiNgplC-u7330T4guBzjsDa-QdhOujSFdAEiaxlmUGHVjQtYW0BgZaOGi_J/exec", { 
+							method: "POST",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify(object)
+						})
+							.then(response => response.json())
+							.then(data => alert("Email sent successfully!"))
+							.catch(error => alert("Error sending email!"));
+					});
+				</script>
+
+
+
+				<ul class="actions special">
+
 					</form>
-				</div>
+			</div>
 			</div>
 		</section>
 
-		 <!--Footer--> 
+
+
+
+		<!--Footer-->
 		<footer id="footer">
-		 <!--Icons--> 
-		<!--<ul class="icons">
-		<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-		<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-		<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-		<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-		<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-		<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-	</ul>-->
-		 <!--Menu 
+			<!--Icons-->
+			<!--<ul class="icons">
+			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+			<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+			<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+		</ul>-->
+			<!--Menu
 		<ul class="menu">
 				<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 			</ul>-->
 
-	</footer>
+		</footer>
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.poptrox.min.js"></script>

@@ -2070,6 +2070,7 @@ input, select, textarea {
 				margin-bottom: 2em;
 			}
 
+
 			.main.style3.primary {
 				background: #151515;
 			}
@@ -2292,45 +2293,60 @@ input, select, textarea {
 		align-items: flex-start;
 	}
 
-		#intro .icons-container .icon {
-			height: 1.7em; /* Set a fixed height */
-			width: auto; /* Allow width to adjust proportionally */
-			opacity: 0.6;
+
+	#intro .content header h2 img {
+		/* Styles for the logo image */
+		max-width: 100%; /* Ensure it doesn't exceed its container */
+		height: auto;
+	}
+
+	/* Media Query for Mobile Devices */
+	@media (max-width: 768px) {
+		#intro .content header h2 img {
+			max-width: 80%; /* Adjust this value to make the logo smaller on mobile */
+			height: auto;
 		}
+	}
+
+	#intro .icons-container .icon {
+		height: 1.7em; /* Set a fixed height */
+		width: auto; /* Allow width to adjust proportionally */
+		opacity: 0.6;
+	}
 
 	#intro .content {
 		position: relative;
 	}
 
 
-/* one */
+	/* one */
 
 	#one {
-		background:url("../../images/one.jpg");
-		background-size: cover;
-		background-attachment:fixed;
-		background-position: center center;
-	}
-
-/* two */
-
-	#two {
-		background: url("../../images/two.jpg");
-		background-size: cover;
-		background-attachment:fixed;
-		background-position:center center;
-	}
-
-/* three */
-
-	#three {
-		background:  url("../../images/three.jpg");
+		background: url("../../images/one.jpg");
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center center;
 	}
 
-/* four */
+	/* two */
+
+	#two {
+		background: url("../../images/two.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+
+	/* three */
+
+	#three {
+		background: url("../../images/three.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+
+	/* four */
 
 	/*#four {
 		background:url("../../images/four.jpg");
@@ -2339,7 +2355,7 @@ input, select, textarea {
 		background-position: center center;
 	}*/
 
-/* five */
+	/* five */
 
 	/*#five {
 		background: url("../../images/five.jpg");
@@ -2348,7 +2364,7 @@ input, select, textarea {
 		background-position:center center;
 	}*/
 
-/* six */
+	/* six */
 
 	/*#six {
 		background:  url("../../images/six.jpg");
@@ -2359,7 +2375,7 @@ input, select, textarea {
 
 
 
-/* Contact */
+	/* Contact */
 
 	#contact {
 		overflow: hidden;
@@ -2385,18 +2401,16 @@ input, select, textarea {
 			transform: translateY(100%);
 		}
 
-		@media screen and (max-width: 736px) {
+	@media screen and (max-width: 736px) {
 
-			#contact .box {
-				padding: 1.5em 1.5em 2em 1.5em;
-			}
-
+		#contact .box {
+			padding: 1.5em 1.5em 2em 1.5em;
 		}
+	}
 
-		@media screen and (max-width: 480px) {
+	@media screen and (max-width: 480px) {
 
-			#contact .box {
-				padding: 1em 1em 2em 1em;
-			}
-
+		#contact .box {
+			padding: 1em 1em 2em 1em;
 		}
+	}

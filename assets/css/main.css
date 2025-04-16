@@ -661,7 +661,8 @@ input, select, textarea {
 
 		.box2.style22 {
 			padding: 1.5em 1.25em 1.5em 1.25em;
-			background-color: #FFFFFF
+			background-color: #FFFFFF;
+			color: #000000;
 		}
 }
 
@@ -669,7 +670,7 @@ input, select, textarea {
 
 	.box {
 		background: #000000;
-		color: #e5e6e7;
+		color: #FFFFFF;
 		padding: 2em;
 			}
 

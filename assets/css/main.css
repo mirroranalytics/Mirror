@@ -636,11 +636,39 @@ input, select, textarea {
 	}
 
 
+/* Box2 */
+
+.box2 {
+	background: #FFFFFF;
+	color: #000000;
+	padding: 2em;
+}
+
+	.box2 > :last-child {
+		margin-bottom: 0;
+	}
+
+	.box2.style22 {
+		width: 75%; /* Set a width */
+		padding: 1.5em; /* Adjust padding */
+	}
+
+@media screen and (max-width: 736px) {
+
+	.box2 {
+		padding: 1em;
+	}
+
+		.box2.style22 {
+			padding: 1.5em 1.25em 1.5em 1.25em;
+			background-color: #000000
+		}
+}
 
 /* Box */
 
 	.box {
-		background: #151515;
+		background: #000000;
 		color: #e5e6e7;
 		padding: 2em;
 			}
@@ -1255,7 +1283,7 @@ input, select, textarea {
 		-webkit-box-sizing: content-box;
 		-ms-box-sizing: content-box;
 		box-sizing: content-box;
-		background: #fff;
+		background: #000000;
 		padding-bottom: 3em;
 		box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
 	}
@@ -2074,11 +2102,11 @@ input, select, textarea {
 
 
 			.main.style3.primary {
-				background: #151515;
+				background: #000000;
 			}
 
 			.main.style3.secondary {
-				background: #151515;
+				background: #000000;
 			}
 
 		.main.dark {

@@ -24,6 +24,8 @@ const mimeTypes = {
   ".woff": "font/woff",
 };
 
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 // Build a map of asset filenames to base64 data URIs
 const assetDir = join(docsDir, "assets");
 const assetMap = {};
@@ -57,17 +59,24 @@ const inlineBuiltHtml = (filePath) => {
     let js = readFileSync(`${docsDir}/assets/${jsFile}`, "utf8");
     // Replace asset references in JS - Vite may use various path patterns
     for (const [filename, dataUri] of Object.entries(assetMap)) {
-      js = js.replaceAll(`"./assets/${filename}"`, `"${dataUri}"`);
-      js = js.replaceAll(`'./assets/${filename}'`, `'${dataUri}'`);
-      js = js.replaceAll(`"/assets/${filename}"`, `"${dataUri}"`);
-      js = js.replaceAll(`"${filename}"`, `"${dataUri}"`);
-      js = js.replaceAll(`new URL("${filename}",import.meta.url).href`, `"${dataUri}"`);
-      js = js.replaceAll(`new URL('./assets/${filename}',import.meta.url).href`, `"${dataUri}"`);
-      js = js.replaceAll(`new URL("./assets/${filename}",import.meta.url).href`, `"${dataUri}"`);
-      js = js.replaceAll(`new URL('/assets/${filename}',import.meta.url).href`, `"${dataUri}"`);
-      js = js.replaceAll(`new URL("/assets/${filename}",import.meta.url).href`, `"${dataUri}"`);
+      const assetPaths = [filename, `./assets/${filename}`, `/assets/${filename}`];
+
+      for (const assetPath of assetPaths) {
+        const doubleQuotedPath = `"${assetPath}"`;
+        const singleQuotedPath = `'${assetPath}'`;
+        const urlPatterns = [
+          new RegExp(`new URL\\(${escapeRegExp(doubleQuotedPath)},\\s*import\\.meta\\.url\\)\\.href`, "g"),
+          new RegExp(`new URL\\(${escapeRegExp(singleQuotedPath)},\\s*import\\.meta\\.url\\)\\.href`, "g"),
+        ];
+
+        for (const pattern of urlPatterns) {
+          js = js.replace(pattern, `"${dataUri}"`);
+        }
+
+        js = js.replaceAll(doubleQuotedPath, `"${dataUri}"`);
+        js = js.replaceAll(singleQuotedPath, `'${dataUri}'`);
+      }
     }
-    js = js.replaceAll("import.meta.url", '""');
     return `<script type="module">${js}</script>`;
   });
 

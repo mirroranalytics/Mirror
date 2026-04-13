@@ -32,7 +32,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-end px-6 py-4 gap-6">
+      <div className="flex items-center justify-end px-6 py-4 gap-6">
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <a

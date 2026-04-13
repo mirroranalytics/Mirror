@@ -55,7 +55,7 @@ const HeroSection = () => {
           className="mt-12"
         >
           <Button variant="hero" size="lg" asChild>
-            <a href="#contact">{t.hero.cta}</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}>{t.hero.cta}</a>
           </Button>
         </motion.div>
       </div>
